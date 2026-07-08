@@ -1,0 +1,12 @@
+{
+  "name": "cam_live",
+  "version": "1.0.0",
+  "description": "Browser-based LAN webcam streaming app for Omarchy/Linux",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
