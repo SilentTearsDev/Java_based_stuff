@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cam_live</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <h1>cam_live</h1>
+      <p class="muted">Omarchy LAN webcam stream</p>
+
+      <div class="section">
+        <label for="cameraSelect">Camera</label>
+        <select id="cameraSelect"></select>
+        <button id="refreshBtn">Refresh cameras</button>
+      </div>
+
+      <div class="section">
+        <label for="resolutionSelect">Resolution</label>
+        <select id="resolutionSelect">
+          <option value="640x480">640x480</option>
+          <option value="1280x720" selected>1280x720</option>
+          <option value="1920x1080">1920x1080</option>
+        </select>
+      </div>
+
+      <div class="section">
+        <label for="fpsSelect">FPS</label>
+        <select id="fpsSelect">
+          <option value="15" selected>15</option>
+          <option value="24">24</option>
+          <option value="30">30</option>
+          <option value="60">60</option>
+        </select>
+      </div>
+
+      <div class="section buttons">
+        <button id="startBtn" class="primary">Start stream</button>
+        <button id="stopBtn">Stop stream</button>
+      </div>
+
+      <div class="section">
+        <h3>Status</h3>
+        <div id="statusBox" class="status">Loading...</div>
+      </div>
+
+      <div class="section">
+        <h3>Viewer URL</h3>
+        <div id="viewerUrl" class="viewer-url">Loading...</div>
+      </div>
+
+      <div class="section help">
+        <p><strong>Use:</strong></p>
+        <ol>
+          <li>Pick a camera</li>
+          <li>Pick resolution/FPS</li>
+          <li>Click <strong>Start stream</strong></li>
+          <li>Open the same URL on your Windows laptop</li>
+        </ol>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="preview-header">
+        <h2>Live Preview</h2>
+      </div>
+      <div class="preview-wrap">
+        <img id="streamImg" alt="Live camera stream" />
+        <div id="placeholder" class="placeholder">
+          Stream not running yet.
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
